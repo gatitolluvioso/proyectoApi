@@ -5,6 +5,17 @@ html {
 }
 body {
   font-size: 16px; /* 1rem = 10px*/
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem;
+  padding: 2rem;
+  margin: 0;
+  background-color: #333;
+  color: #fff;
 }
 
 #tarjetas {
@@ -25,4 +36,10 @@ body {
   margin: 1rem;
   width: 20rem;
   text-align: center;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
 }
