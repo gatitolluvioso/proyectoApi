@@ -1,24 +1,23 @@
 header {
   width: 100%;
-  height: auto;
   background: #1e1f22;
   margin-bottom: 20px;
-  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);*/
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 header .titulo {
   margin-left: 50px;
 }
+
 header .buscar {
   margin-right: 50px;
 }
 
-.cabezera {
+.cabecera { 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   width: 84%;
   color: #bc3a4b;
@@ -30,12 +29,9 @@ header .buscar {
   gap: 10px;
 }
 
-.search input {
+.buscar input { 
   padding: 0.6rem;
   width: 16rem;
-}
-.buscar input {
-  padding: 5px 10px;
   max-width: 200px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -48,14 +44,14 @@ body {
   background-color: #2a2c30;
 }
 
-main {
-  flex: 1; /* ocupa todo el espacio disponible */
-}
-
 body {
   display: flex;
   flex-direction: column;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+  flex: 1; 
 }
 
 .main-section {
@@ -95,8 +91,6 @@ body {
 }
 
 #tarjetas div:hover {
-  height: auto;
-  transition: all 0.3s ease;
   background-color: #34373d;
   cursor: pointer;
 }
@@ -105,34 +99,81 @@ footer {
   background: #1e1f22;
   color: #a7a9ac;
   text-align: center;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
   margin-top: 4rem;
-  /*box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.8);*/
 }
 
 .contenido {
-    max-width: 84%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* título arriba, luego fila con imagen+info */
+  max-width: 50%;
+  margin: 2rem auto;
+  background-color: #2a2c30;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #e6e6e6;
+}
+
+
+.contenido h2 {
+  margin-top: 0;
+}
+
+.contenido img {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .ingredientes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+  margin-top: 1rem;
+}
+
+.ingredientes ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.ingredientes li {
+  margin-bottom: 0.5rem;
 }
 
 .instrucciones {
-    margin-top: 1rem;
-    text-align: left;
+  margin-top: 1rem;
 }
 
 .cerrar {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #bc3a4b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #bc3a4b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.acomodo-info {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: flex-start; /* controla alineación horizontal */
+} 
+
+.acomodo-img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.acomodo-img img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ingredientes, .instrucciones {
+  flex: 1;                    /* ocupan el resto del espacio */
+  text-align: left;
+}
+
