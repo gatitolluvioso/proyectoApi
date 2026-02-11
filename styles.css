@@ -1,82 +1,81 @@
 header {
-    width: 100%;
-    height: auto;
-    background: #f0c7c7;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: auto;
+  background: #f0c7c7;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .head {
-    display: flex;
-    justify-content: space-between;
-    background: #f0c7c7;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  background: #f0c7c7;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .search {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .search input {
-    padding: 5px 10px;
-    max-width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  padding: 5px 10px;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
-
 
 main {
-    flex: 1; /* ocupa todo el espacio disponible */
+  flex: 1; /* ocupa todo el espacio disponible */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 #tarjetas div {
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    overflow-y: auto;
-    text-align: center;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  text-align: center;
 }
 
 #tarjetas div img {
-    width: 95%;
-    height: auto;
-    border-radius: 5px;
+  width: 95%;
+  height: auto;
+  border-radius: 5px;
 }
 
 #tarjetas div img:hover {
-    width: 90%;
-    height: auto;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 footer {
-    background: #f0c7c7;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.8);
+  background: #f0c7c7;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.8);
 }
