@@ -3,7 +3,7 @@ datos = {
 };
 
 async function extraerDatos() {
-  document.getElementById("tarjetas").innerHTML = "<p>Cargando drinks...</p>";
+  document.getElementById("tarjetas").innerHTML = "<p>Cargando bebidas...</p>";
   const letras = "abcdefghijklmnopqrstuvwxyz";
 
   for (let letra of letras) {
@@ -25,16 +25,60 @@ function mostrarDatos() {
   let tDrinks = document.getElementById("tarjetas");
   tDrinks.innerHTML = "";
   for (let i = 0; i < datos.drinks.length; i++) {
-    var tarjeta = document.createElement("div");
-    var tragoNombre = document.createElement("h2");
-    var tragoImagen = document.createElement("img");
+  const drink = datos.drinks[i]; // capturamos el objeto actual
 
-    tragoNombre.innerHTML = datos.drinks[i].strDrink;
-    tragoImagen.src = datos.drinks[i].strDrinkThumb;
+  var tarjeta = document.createElement("div");
+  var tragoNombre = document.createElement("h2");
+  var tragoImagen = document.createElement("img");
 
-    tarjeta.appendChild(tragoNombre);
-    tarjeta.appendChild(tragoImagen);
-    tDrinks.appendChild(tarjeta);
+  tragoNombre.innerHTML = drink.strDrink;
+  tragoImagen.src = drink.strDrinkThumb;
+
+  tragoImagen.addEventListener("click", function () {
+    var nuevaVentana = document.createElement("div");
+    nuevaVentana.style.position = "fixed";
+    nuevaVentana.style.width = "100%";
+    nuevaVentana.style.height = "100%";
+    nuevaVentana.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+    nuevaVentana.style.zIndex = "1000";
+
+    nuevaVentana.innerHTML = `
+      <div class="contenido">
+      <h2>${drink.strDrink}</h2>
+      <div class="acomodo-img">
+        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"/>
+      </div>
+        <div class="acomodo-info">
+        <div class="ingredientes">
+          <p><strong>Ingredientes:</strong></p>
+          <ul>
+            ${[...Array(15)].map((_, index) => {
+              const ingredient = drink[`strIngredient${index + 1}`];
+              const measure = drink[`strMeasure${index + 1}`];
+              return ingredient
+                ? `<li>${measure ? measure : ""} ${ingredient}</li>`
+                : "";
+            }).join("")}
+          </ul>
+        </div>
+        <div class="instrucciones">
+          <p><strong>Instrucciones:</strong> ${drink.strInstructions}</p>
+        </div>
+        </div>
+        <div class="boton-cerrar">
+          <button class="cerrar">Cerrar</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(nuevaVentana);
+    nuevaVentana.querySelector(".cerrar").addEventListener("click", function () {
+      document.body.removeChild(nuevaVentana);
+    });
+  });
+
+  tarjeta.appendChild(tragoNombre);
+  tarjeta.appendChild(tragoImagen);
+  tDrinks.appendChild(tarjeta);
   }
 }
 function mostrarChistes() {
@@ -49,4 +93,4 @@ function mostrarChistes() {
       chiste.textContent = data.setup + " - " + data.punchline;
       chistes.appendChild(chiste);
     });
-}
+}  
