@@ -6,6 +6,13 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+header .title {
+  margin-left: 50px;
+}
+header .search {
+  margin-right: 50px;
+}
+
 .head {
   display: flex;
   justify-content: space-between;
