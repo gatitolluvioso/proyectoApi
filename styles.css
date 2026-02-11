@@ -6,7 +6,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.head {
+.cabezera {
   display: flex;
   justify-content: space-between;
   background: #f0c7c7;
@@ -14,13 +14,13 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.search {
+.buscar {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.search input {
+.buscar input {
   padding: 5px 10px;
   max-width: 200px;
   border: 1px solid #ccc;
