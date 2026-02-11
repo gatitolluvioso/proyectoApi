@@ -9,7 +9,14 @@ header {
   align-items: center;
 }
 
-.head {
+header .titulo {
+  margin-left: 50px;
+}
+header .buscar {
+  margin-right: 50px;
+}
+
+.cabezera {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -17,7 +24,7 @@ header {
   color: #bc3a4b;
 }
 
-.search {
+.buscar {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -26,6 +33,10 @@ header {
 .search input {
   padding: 0.6rem;
   width: 16rem;
+}
+.buscar input {
+  padding: 5px 10px;
+  max-width: 200px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
