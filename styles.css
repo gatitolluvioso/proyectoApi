@@ -14,7 +14,7 @@ header .buscar {
   margin-right: 50px;
 }
 
-.cabecera { 
+.cabecera {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@ header .buscar {
   gap: 10px;
 }
 
-.buscar input { 
+.buscar input {
   padding: 0.6rem;
   width: 16rem;
   max-width: 200px;
@@ -51,7 +51,7 @@ body {
 }
 
 main {
-  flex: 1; 
+  flex: 1;
 }
 
 .main-section {
@@ -114,7 +114,6 @@ footer {
   color: #e6e6e6;
 }
 
-
 .contenido h2 {
   margin-top: 0;
 }
@@ -158,7 +157,7 @@ footer {
   gap: 2rem;
   align-items: flex-start;
   justify-content: flex-start; /* controla alineación horizontal */
-} 
+}
 
 .acomodo-img {
   width: 50%;
@@ -172,8 +171,43 @@ footer {
   border-radius: 10px;
 }
 
-.ingredientes, .instrucciones {
-  flex: 1;                    /* ocupan el resto del espacio */
+.ingredientes,
+.instrucciones {
+  flex: 1; /* ocupan el resto del espacio */
   text-align: left;
 }
 
+.buscar {
+  position: relative;
+  display: inline-block;
+}
+
+#buscador {
+  width: 280px;
+  padding: 0.7rem 1rem 0.7rem 2.8rem;
+  border-radius: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+#buscador:focus {
+  border: 2px solid #bc3a4b;
+  box-shadow: 0 0 12px rgba(188, 58, 75, 0.6);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#buscador::placeholder {
+  color: #bbb;
+  opacity: 0.7;
+}
+
+.icono {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* para que el icono no interfiera con el clic en el input */
+}
