@@ -40,7 +40,7 @@ function crearTarjeta(drink) {
   tragoNombre.textContent = drink.strDrink;
   tragoImagen.src = drink.strDrinkThumb;
 
-  tragoImagen.addEventListener("click", function () {
+  tarjeta.addEventListener("click", function () {
     const nuevaVentana = document.createElement("div");
     nuevaVentana.style.position = "fixed";
     nuevaVentana.style.width = "100%";
@@ -57,22 +57,24 @@ function crearTarjeta(drink) {
             <img src="${drink.strDrinkThumb}" />
           </div>
 
-          <div class="ingredientes">
-            <p><strong>Ingredientes:</strong></p>
-            <ul>
-              ${[...Array(15)]
-                .map((_, i) => {
-                  const ing = drink[`strIngredient${i + 1}`];
-                  const meas = drink[`strMeasure${i + 1}`];
-                  return ing ? `<li>${meas ? meas : ""} ${ing}</li>` : "";
-                })
-                .join("")}
-            </ul>
-          </div>
+          <div class="info-bebida">
+            <div class="ingredientes">
+              <p><strong>Ingredientes:</strong></p>
+              <ul>
+                ${[...Array(15)]
+                  .map((_, i) => {
+                    const ing = drink[`strIngredient${i + 1}`];
+                    const meas = drink[`strMeasure${i + 1}`];
+                    return ing ? `<li>${meas ? meas : ""} ${ing}</li>` : "";
+                  })
+                  .join("")}
+              </ul>
+            </div>
 
-          <div class="instrucciones">
-            <p><strong>Instrucciones:</strong></p>
-            <p>${drink.strInstructions}</p>
+            <div class="instrucciones">
+              <p><strong>Instrucciones:</strong></p>
+              <p>${drink.strInstructionsES}</p>
+            </div>
           </div>
         </div>
 
