@@ -1,0 +1,28 @@
+{
+  "drinks": [
+    {
+      "idDrink": "11007",
+      "strDrink": "Margarita",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
+      "strInstructionsES": "Mezclar todos los ingredientes con hielo.",
+      "strIngredient1": "Tequila",
+      "strIngredient2": "Triple sec",
+      "strIngredient3": "Lime juice",
+      "strMeasure1": "1 1/2 oz",
+      "strMeasure2": "1/2 oz",
+      "strMeasure3": "1 oz"
+    },
+    {
+      "idDrink": "11008",
+      "strDrink": "Mojito",
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg",
+      "strInstructionsES": "Mezclar menta con ron y lima.",
+      "strIngredient1": "Ron",
+      "strIngredient2": "Lima",
+      "strIngredient3": "Menta",
+      "strMeasure1": "2 oz",
+      "strMeasure2": "1 oz",
+      "strMeasure3": "6 hojas"
+    }
+  ]
+}
